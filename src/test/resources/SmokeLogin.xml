@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Facebook login page">
+    <test name="smoke + login" >
+        <classes>
+            <class name="TestOrganization.ui.FacebookSmoke" />
+            <class name="TestOrganization.ui.FacebookPageLogin" />
+        </classes>
+    </test>
+</suite>
