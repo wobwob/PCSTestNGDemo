@@ -36,8 +36,8 @@ public class TestAnnotationAttributesSelenium {
 
         Assert.assertNull(Pages.FBHomePage().getWelcomeMessage());
         Assert.assertEquals(Pages.FBLoginPage().getLoginError().getText(),
-                "The email address or phone number that you've entered doesn't match any account. " +
-                        "Sign up for an account.");
+                "Wrong credentials\n" +
+                        "Invalid username or password");
     }
 
     @AfterMethod

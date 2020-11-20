@@ -9,8 +9,6 @@ import java.util.List;
 public class FaceBookLoginPage {
     public String url = "https://www.facebook.com/";
 
-    String loginErrorXPath = "//*[@id=\"email_container\"]/div[2]";
-
     public void goTo() {
         Browser.goTo(url);
         Browser.wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//iframe")));
@@ -31,7 +29,7 @@ public class FaceBookLoginPage {
     }
 
     public WebElement getLoginError() {
-        List<WebElement> loginError = Browser.driver.findElements(By.xpath(loginErrorXPath));
+        List<WebElement> loginError = Browser.driver.findElements(By.id("error_box"));
 
         if (!loginError.isEmpty()) {
             return loginError.get(0);
